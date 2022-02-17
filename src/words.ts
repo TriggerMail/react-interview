@@ -3714,7 +3714,7 @@ export const words = [
   "zucco",
 ];
 
-export const getSuggestions = (searchPhrase: string) =>
+export const getSuggestions = (searchPhrase: string): Promise<string[]> =>
   new Promise((resolve) =>
     setTimeout(
       () => resolve(words.filter((word) => word.startsWith(searchPhrase))),
